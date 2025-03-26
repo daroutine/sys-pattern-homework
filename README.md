@@ -35,7 +35,7 @@ where length > (select AVG(length) from film);'
 
 ### Ответ:
 
-![3](https://github.com/daroutine/sys-pattern-homework/blob/main/3.jpg);
+![3](https://github.com/daroutine/sys-pattern-homework/blob/main/3.png);
 
 'select month(payment_date) as Месяц, SUM(p.amount) "Сумма платежей", COUNT(p.rental_id) "Количество аренд" 
 from payment p
