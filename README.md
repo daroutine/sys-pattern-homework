@@ -42,3 +42,19 @@ from payment p
 group by MONTH(payment_date)
 order by SUM(p.amount ) 
 desc limit 1;'
+
+### Доработка задания 3
+
+![3.2](https://github.com/daroutine/sys-pattern-homework/blob/main/3.2.jpg)
+
+SELECT 
+    DATE_FORMAT(p.payment_date, '%Y-%M') AS Месяц, 
+    SUM(p.amount) AS Сумма_платежей, 
+    COUNT(p.rental_id) AS Количество_аренд
+FROM 
+    payment p 
+GROUP BY 
+    DATE_FORMAT(p.payment_date, '%Y-%M')
+ORDER BY 
+    Сумма_платежей DESC 
+LIMIT 1;
